@@ -5,7 +5,7 @@
 
 새로고침을 통해 변환된 이미지를 삭제시킬 수 있다. 
 
-기능 종류
+**기능 종류** 
 
   * **반전** : 좌우, 상하, 상하좌우
   * **색 변환** : 흑백
@@ -18,126 +18,154 @@
   * **영상 분할** : 컨투어, 허프선변환
 
 
-이미지 열기
+
+--------------------------------------------------------------
 
 
-좌우반전
+### 사진 변환 결과
+
+#### 1. 반전
+
+* 좌우 반전
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/LR.png" width="700" height="300"/>
 
-
-상하반전
+* 상하 반전
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/UD.png" width="700" height="300"/>
 
-상하좌우반전
+* 상하좌우 반전
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/UDLR.png" width="700" height="300"/>
 
-흑백
+
+#### 2. 색변환
+
+* 흑백
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/GRAY.png" width="700" height="300"/>
 
-확대
+
+#### 3. 크기 조절
+
+* 확대
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/Big.png" width="700" height="300"/>
 
-축소
+* 축소
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/small.png" width="700" height="300"/>
 
-45도회전
+
+#### 4. 회전 
+
+* 45도회전
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/45.png" width="700" height="300"/>
 
-90도 회전 
+* 90도 회전 
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/90.png" width="700" height="300"/>
 
-축소회전
+* 축소회전
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/small45.png" width="700" height="300"/>
 
-어핀변환
+
+#### 5. 변환
+
+* 어핀변환
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/affine.png" width="700" height="300"/>
 
-원근변환
+* 원근변환
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/perspective.png" width="700" height="300"/>
 
-비선형변환
+* 비선형변환
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/wave.png" width="700" height="300"/>
 
-오목왜곡
+
+#### 6. 왜곡
+
+* 오목왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/distortion_concave.png" width="700" height="300"/>
 
-볼록왜곡
+* 볼록왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/distortion_convex.png" width="700" height="300"/>
 
-핀쿠션왜곡
+* 핀쿠션왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/pincushion.png" width="700" height="300"/>
 
-배럴왜곡
+* 배럴왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/barrel.png" width="700" height="300"/>
 
-좌우거울왜곡
+* 좌우거울왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/mirror_LR.png" width="700" height="300"/>
 
-상하거울왜곡
+* 상하거울왜곡
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/mirror_UD.png" width="700" height="300"/>
 
-평균블러링
+
+#### 7. 블러링
+
+* 평균블러링
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/blur.png" width="700" height="300"/>
 
-가우시안블러
+* 가우시안블러
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/gaussian.png" width="700" height="300"/>
 
-미디언 블러
+* 미디언 블러
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/median.png" width="700" height="300"/>
 
-바이레터럴 블러 
+* 바이레터럴 블러 
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/bilateral.png" width="700" height="300"/>
 
-기본미분
+
+#### 8. 경계검출
+
+* 기본미분
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/differential.png" width="700" height="300"/>
 
-로버츠교차
+* 로버츠교차
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/roberts.png" width="700" height="300"/>
 
-케니엣지
+* 케니엣지
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/canny.png" width="700" height="300"/>
 
-프리윗
+* 프리윗
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/prewitt.png" width="700" height="300"/>
 
-소벨
+* 소벨
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/sobel.png" width="700" height="300"/>
 
-라플라시안
+* 라플라시안
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/laplacian.png" width="700" height="300"/>
 
-컨투어
+
+#### 9. 영상분할
+
+* 컨투어
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/contour.png" width="700" height="300"/>
 
-허프선변환
+* 허프선변환
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/hough.png" width="700" height="300"/>
