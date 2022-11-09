@@ -1,6 +1,8 @@
 # 컴퓨터 비전1 중간고사 과제
 # Photoshop
 
+https://github.com/kkkimsuji/vision/blob/main/photoshop.py
+
 이미지 열기를 통해 이미지를 불러온 후, 버튼을 클릭하면 버튼에 써있는 기능을 실행시킬 수 있다. 
 
 새로고침을 통해 변환된 이미지를 삭제시킬 수 있다. 
