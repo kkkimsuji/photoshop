@@ -119,6 +119,10 @@ class MainWindow(QMainWindow):
         button29 = QPushButton("컨투어")
         button31 = QPushButton("허프선변환")
         button30 = QPushButton("새로고침")
+        button32 = QPushButton("얼굴인식")
+        button33 = QPushButton("얼굴자르기")
+        button34 = QPushButton("모자이크")
+        button35 = QPushButton("블러모자이크") 
 
         button0.clicked.connect(self.show_file_dialog)
         button1.clicked.connect(self.flip_LR_image)
@@ -152,6 +156,10 @@ class MainWindow(QMainWindow):
         button29.clicked.connect(self.contour)
         button31.clicked.connect(self.hough)
         button30.clicked.connect(self.clear_label)
+        button32.clicked.connect(self.face_detect)
+        button33.clicked.connect(self.face_crop)
+        button34.clicked.connect(self.mosaic)
+        button35.clicked.connect(self.blur_mosaic)
      
         label0 = QLabel("이미지")
         label1 = QLabel("반전")
@@ -163,37 +171,45 @@ class MainWindow(QMainWindow):
         label7 = QLabel("블러")
         label8 = QLabel("경계검출")
         label9 = QLabel("영상분할")
+        label10 = QLabel("얼굴")
+        label11 = QLabel("모자이크")
 
         label0.setStyleSheet ("background-color: #E0E0E0")
         label0.setAlignment(Qt.AlignCenter)
-        label0.setFont(QFont(" ", 13, QFont.Bold))
+        label0.setFont(QFont(" ", 11, QFont.Bold))
         label1.setStyleSheet ("background-color: #E0E0E0")
         label1.setAlignment(Qt.AlignCenter)
-        label1.setFont(QFont(" ", 13, QFont.Bold))
+        label1.setFont(QFont(" ", 11, QFont.Bold))
         label2.setStyleSheet ("background-color: #E0E0E0")
         label2.setAlignment(Qt.AlignCenter)
-        label2.setFont(QFont(" ", 13, QFont.Bold))
+        label2.setFont(QFont(" ", 11, QFont.Bold))
         label3.setStyleSheet ("background-color: #E0E0E0")
         label3.setAlignment(Qt.AlignCenter)
-        label3.setFont(QFont(" ", 13, QFont.Bold))
+        label3.setFont(QFont(" ", 11, QFont.Bold))
         label4.setStyleSheet ("background-color: #E0E0E0")
         label4.setAlignment(Qt.AlignCenter)
-        label4.setFont(QFont(" ", 13, QFont.Bold))
+        label4.setFont(QFont(" ", 11, QFont.Bold))
         label5.setStyleSheet ("background-color: #E0E0E0")
         label5.setAlignment(Qt.AlignCenter)
-        label5.setFont(QFont(" ", 13, QFont.Bold))
+        label5.setFont(QFont(" ", 11, QFont.Bold))
         label6.setStyleSheet ("background-color: #E0E0E0")
         label6.setAlignment(Qt.AlignCenter)
-        label6.setFont(QFont(" ", 13, QFont.Bold))
+        label6.setFont(QFont(" ", 11, QFont.Bold))
         label7.setStyleSheet ("background-color: #E0E0E0")
         label7.setAlignment(Qt.AlignCenter)
-        label7.setFont(QFont(" ", 13, QFont.Bold))
+        label7.setFont(QFont(" ", 11, QFont.Bold))
         label8.setStyleSheet ("background-color: #E0E0E0")
         label8.setAlignment(Qt.AlignCenter)
-        label8.setFont(QFont(" ", 13, QFont.Bold))
+        label8.setFont(QFont(" ", 11, QFont.Bold))
         label9.setStyleSheet ("background-color: #E0E0E0")
         label9.setAlignment(Qt.AlignCenter)
-        label9.setFont(QFont(" ", 13, QFont.Bold))
+        label9.setFont(QFont(" ", 11, QFont.Bold))
+        label10.setStyleSheet ("background-color: #E0E0E0")
+        label10.setAlignment(Qt.AlignCenter)
+        label10.setFont(QFont(" ", 11, QFont.Bold))
+        label11.setStyleSheet ("background-color: #E0E0E0")
+        label11.setAlignment(Qt.AlignCenter)
+        label11.setFont(QFont(" ", 11, QFont.Bold))
 
         sidebar.addWidget(button0, 0, 0)
         sidebar.addWidget(button1, 2, 0)
@@ -227,6 +243,10 @@ class MainWindow(QMainWindow):
         sidebar.addWidget(button29, 22, 0)
         sidebar.addWidget(button31, 22, 1)
         sidebar.addWidget(button30, 0, 1)
+        sidebar.addWidget(button32, 24, 0)
+        sidebar.addWidget(button33, 24, 1)
+        sidebar.addWidget(button34, 26, 0)
+        sidebar.addWidget(button35, 26, 1)
       
         sidebar.addWidget(label0, -1, 0)
         sidebar.addWidget(label1, 1, 0)
@@ -238,6 +258,8 @@ class MainWindow(QMainWindow):
         sidebar.addWidget(label7, 15, 0)
         sidebar.addWidget(label8, 18, 0)
         sidebar.addWidget(label9, 21, 0)
+        sidebar.addWidget(label10, 23,0)
+        sidebar.addWidget(label11, 25, 0)
 
         main_layout.addLayout(sidebar)
         
@@ -741,11 +763,73 @@ class MainWindow(QMainWindow):
         pixmap = QPixmap(image)
         self.label2.setPixmap(pixmap) 
     
+    #32 얼굴인식
+    def face_detect(self):
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        image = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(image)
+        for (x, y, w, h) in faces:
+            cv2.rectangle(self.image, (x, y), (x + w, y + h), (255, 0, 0), 2)    
+        cv2.imshow('face',self.image)
+        cv2.moveWindow('face', 1000, 300)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+    #33 얼굴자르기
+    def face_crop(self):
+        face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+        gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
+        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+        for (x, y, w, h) in faces:
+            cropped = self.image[y - int(h/4):y + h + int(h/4), x - int(w/4):x + w + int(w/4)]
+        cv2.imshow('copped_image', cropped)
+        cv2.moveWindow('copped_image', 1000, 300)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+    #34 모자이크
+    def mosaic(self):
+        rate = 15
+        title = 'mosaic'
+        while True:
+            x, y, w, h = cv2.selectROI(title, self.image, False)
+            if w and h:
+                roi = self.image[y:y+h, x:x+w]
+                roi = cv2.resize(roi, (w//rate, h//rate))
+                roi = cv2.resize(roi, (w, h), interpolation = cv2.INTER_AREA)
+                self.image[y:y+h, x:x+w] = roi
+                cv2.imshow(title, self.image)
+                cv2.moveWindow(self.image, 1000, 300)
+                cv2.moveWindow(title, 1000, 300)
+            else:
+                break
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+    #35 블러모자이크
+    def blur_mosaic(self):
+        ksize = 30             
+        title = 'blur_mosaic'    
+        while True:
+            x, y, w, h = cv2.selectROI(title, self.image, False)
+            if w > 0 and h > 0:         
+                roi = self.image[y:y+h, x:x+w]   
+                roi = cv2.blur(roi, (ksize, ksize)) 
+                self.image[y:y+h, x:x+w] = roi   
+                cv2.imshow(title, self.image)
+                cv2.moveWindow(self.image, 1000, 300)
+                cv2.moveWindow(title, 1000, 300)
+            else:
+                break
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
     
     #30 새로고침
     def clear_label(self):
         self.label2.clear()
         self.label3.clear()
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
 
     
 if __name__ == "__main__":
@@ -753,3 +837,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
+
