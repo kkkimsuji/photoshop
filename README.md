@@ -1,8 +1,6 @@
 # 컴퓨터 비전1 중간고사 과제
 # Photoshop
 
-https://github.com/kkkimsuji/vision/blob/main/photoshop.py
-
 이미지 열기를 통해 이미지를 불러온 후, 버튼을 클릭하면 버튼에 써있는 기능을 실행시킬 수 있다. 
 
 새로고침을 통해 변환된 이미지를 삭제시킬 수 있다. 
@@ -18,6 +16,8 @@ https://github.com/kkkimsuji/vision/blob/main/photoshop.py
   * **블러** : 평균블러링, 가우시안블러, 미디언 블러, 바이레터럴 블러
   * **경계 검출** : 기본 미분, 로버츠 교차, 케니 엣지, 프리윗, 소벨, 라플라시안
   * **영상 분할** : 컨투어, 허프선변환
+  * **얼굴** : 얼굴인식, 얼굴자르기
+  * **모자이크** : 모자이크, 블러모자이크
 
 
 
@@ -171,3 +171,17 @@ https://github.com/kkkimsuji/vision/blob/main/photoshop.py
 * 허프선변환
 
 <img src="https://github.com/kkkimsuji/vision/blob/main/hough.png" width="700" height="300"/>
+
+
+#### 10. 얼굴
+
+* 얼굴인식
+
+* 얼굴 자르기
+
+
+#### 11. 모자이크
+
+* 모자이크
+
+* 블러 모자이크
