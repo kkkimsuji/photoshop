@@ -788,11 +788,10 @@ class MainWindow(QMainWindow):
         cv2.destroyAllWindows()
 
     #34 모자이크
-    def test(self):
+    def mosaic(self):
         rate = 15
         title = 'mosaic'
         x, y, w, h = cv2.selectROI(title, self.image, False)
-
         roi = self.image[y:y+h, x:x+w]
         roi = cv2.resize(roi, (w//rate, h//rate))
         roi = cv2.resize(roi, (w, h), interpolation = cv2.INTER_AREA)
@@ -810,19 +809,18 @@ class MainWindow(QMainWindow):
     def blur_mosaic(self):
         ksize = 30             
         title = 'blur_mosaic'    
-        while True:
-            x, y, w, h = cv2.selectROI(title, self.image, False)
-            if w > 0 and h > 0:         
-                roi = self.image[y:y+h, x:x+w]   
-                roi = cv2.blur(roi, (ksize, ksize)) 
-                self.image[y:y+h, x:x+w] = roi   
-                cv2.imshow(title, self.image)
-                cv2.moveWindow(self.image, 1000, 300)
-                cv2.moveWindow(title, 1000, 300)
-            else:
-                break
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        x, y, w, h = cv2.selectROI(title, self.image, False)   
+        roi = self.image[y:y+h, x:x+w]   
+        roi = cv2.blur(roi, (ksize, ksize)) 
+        image = self.image
+        image[y:y+h, x:x+w] = roi  
+        h, w, _ = self.image.shape
+        bytes_per_line = 3 * w
+        image1 = QImage(
+            self.image.data, w, h, bytes_per_line, QImage.Format_RGB888
+        ).rgbSwapped()
+        pixmap = QPixmap(image1)
+        self.label2.setPixmap(pixmap)
     
     #30 새로고침
     def clear_label(self):
