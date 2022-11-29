@@ -788,23 +788,23 @@ class MainWindow(QMainWindow):
         cv2.destroyAllWindows()
 
     #34 모자이크
-    def mosaic(self):
+    def test(self):
         rate = 15
         title = 'mosaic'
-        while True:
-            x, y, w, h = cv2.selectROI(title, self.image, False)
-            if w and h:
-                roi = self.image[y:y+h, x:x+w]
-                roi = cv2.resize(roi, (w//rate, h//rate))
-                roi = cv2.resize(roi, (w, h), interpolation = cv2.INTER_AREA)
-                self.image[y:y+h, x:x+w] = roi
-                cv2.imshow(title, self.image)
-                cv2.moveWindow(self.image, 1000, 300)
-                cv2.moveWindow(title, 1000, 300)
-            else:
-                break
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        x, y, w, h = cv2.selectROI(title, self.image, False)
+
+        roi = self.image[y:y+h, x:x+w]
+        roi = cv2.resize(roi, (w//rate, h//rate))
+        roi = cv2.resize(roi, (w, h), interpolation = cv2.INTER_AREA)
+        image1 = self.image
+        image1[y:y+h, x:x+w] = roi
+        h, w, _ = self.image.shape
+        bytes_per_line = 3 * w
+        image1 = QImage(
+            self.image.data, w, h, bytes_per_line, QImage.Format_RGB888
+        ).rgbSwapped()
+        pixmap = QPixmap(image1)
+        self.label2.setPixmap(pixmap)
 
     #35 블러모자이크
     def blur_mosaic(self):
