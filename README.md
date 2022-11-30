@@ -179,25 +179,16 @@
 <img src="https://github.com/kkkimsuji/vision/blob/main/reg_face.png" width="700" height="300"/>
 
 * 얼굴 자르기
-
 <img src="https://github.com/kkkimsuji/vision/blob/main/crop_face.png" width="700" height="300"/>
-
 
 #### 11. 모자이크
 
 * 모자이크
-
 <img src="https://github.com/kkkimsuji/vision/blob/main/roi.png" width="700" height="300"/>
-
 위 사진처럼 새 창이 뜨면 영역을 선택한 후 Enter키를 누르면 결과 사진이 출력된다.
-
 <img src="https://github.com/kkkimsuji/vision/blob/main/mosaic.png" width="700" height="300"/>
 
-
 * 블러 모자이크
-
 <img src="https://github.com/kkkimsuji/vision/blob/main/blur_mosaic.png" width="700" height="300"/>
-
 위 사진처럼 새 창이 뜨면 영역을 선택한 후 Enter키를 누르면 결과 사진이 출력된다.
-
-<img src="https://github.com/kkkimsuji/vision/blob/main/blur_mosaic_result.png"/>
+<img src="https://github.com/kkkimsuji/vision/blob/main/blur_mosaic_result.png" width="700" height="300"/>
