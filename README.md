@@ -128,7 +128,7 @@
 
 * 가우시안블러
 
-<img src="https://github.com/kkkimsuji/vision/blob/main/gaussian.png" width="700" height="300"/>
+<img src="https://github.com/kkkimsuji/vision/blob/main/gaussian.pn" width="700" height="300"/>
 
 * 미디언 블러
 
