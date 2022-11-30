@@ -5,9 +5,9 @@
 
 '새로고침'을 통해 변환된 이미지를 삭제시킬 수 있다. 
 
-'얼굴인식', '모자이크', '블러모자이크' 기능은 다른 기능과 중복되어 출력 가능하다. 이를 원하지 않을 때에는 이미지 열기를 통해  이미지를 불러온다.
+'얼굴인식', '모자이크', '블러모자이크' 기능은 다른 기능과 중복되어 출력 가능하다. 이를 원하지 않을 때에는 '이미지 열기'를 통해 이미지를 새로 불러온다.
 
-
+<br>
 
 **기능 종류** 
 
@@ -128,7 +128,7 @@
 
 * 가우시안블러
 
-<img src="https://github.com/kkkimsuji/vision/blob/main/gaussian.pn" width="700" height="300"/>
+<img src="https://github.com/kkkimsuji/vision/blob/main/gaussian.png" width="700" height="300"/>
 
 * 미디언 블러
 
@@ -188,7 +188,7 @@
 #### 11. 모자이크
 
 * 모자이크
-<img src="https://github.com/kkkimsuji/vision/blob/main/roi.png" width="700" height="300"/>
+<img src="https://github.com/kkkimsuji/vision/blob/main/roi.png" width="300" height="300"/>
 위 사진처럼 새 창이 뜨면 영역을 선택한 후 Enter키를 누르면 결과 사진이 출력된다.
 <img src="https://github.com/kkkimsuji/vision/blob/main/mosaic.png" width="700" height="300"/>
 
