@@ -5,7 +5,7 @@
 
 '새로고침'을 통해 변환된 이미지를 삭제시킬 수 있다. 
 
-**'얼굴인식', '모자이크', '블러모자이크' 기능은 다른 기능과 중복되어 출력 가능하다. <br> 이를 원하지 않을 때에는 '이미지 열기'를 통해 이미지를 새로 불러온다.**
+**'얼굴인식', '모자이크', '블러모자이크' 기능은 다른 기능과 중복되어 출력 가능하다.  ( 예: 모자이크 된 사진을 90도 회전 ) <br> 이를 원하지 않을 때에는 '이미지 열기'를 통해 이미지를 새로 불러온다.**
 
 <br>
 
@@ -188,11 +188,22 @@
 #### 11. 모자이크
 
 * 모자이크
+
+아래 사진처럼 모자이크 할 영역을 선택하는 창이 뜨면 드래그하여 영역 선택 후 Enter키를 눌러 결과를 출력한다. <br>
+만약 아래 사진의 창이 닫히지 않는다면 'Esc'키를 누른 후 창닫기를 누른다.
+
 <img src="https://github.com/kkkimsuji/vision/blob/main/roi.png" width="300" height="300"/>
-위 사진처럼 새 창이 뜨면 영역을 선택한 후 Enter키를 누르면 결과 사진이 출력된다.
+
 <img src="https://github.com/kkkimsuji/vision/blob/main/mosaic.png" width="700" height="300"/>
 
+
+
 * 블러 모자이크
+
+아래 사진처럼 블러 모자이크 할 영역을 선택하는 창이 뜨면 드래그하여 영역 선택 후 Enter키를 눌러 결과를 출력한다. <br>
+만약 아래 사진의 창이 닫히지 않는다면 'Esc'키를 누른 후 창닫기를 누른다.
+
 <img src="https://github.com/kkkimsuji/vision/blob/main/blur_mosaic.png" width="300" height="300"/>
-위 사진처럼 새 창이 뜨면 영역을 선택한 후 Enter키를 누르면 결과 사진이 출력된다.
+
+
 <img src="https://github.com/kkkimsuji/vision/blob/main/blur_mosaic_result.png" width="700" height="300"/>
