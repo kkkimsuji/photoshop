@@ -2,7 +2,7 @@
 # Photoshop
 
 ### 사용 방법
-<img src="https://github.com/kkkimsuji/vision/blob/main/photoshop_3.png" width="700" height="400"/>
+<img src="https://github.com/kkkimsuji/vision/blob/main/photoshop_3.png" width="850" height="500"/>
 
 * '이미지 열기'를 통해 이미지를 불러온 후, 기능 버튼을 클릭하면 버튼에 써있는 기능을 실행시킬 수 있다. 
 
