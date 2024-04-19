@@ -9,7 +9,9 @@
 * '새로고침'을 통해 변환된 이미지를 삭제시킬 수 있다. 
 
 * **'얼굴인식', '모자이크', '블러모자이크' 기능은 다른 기능과 중복되어 출력 가능하다.  ( 예: 모자이크 된 사진을 흑백사진으로 변환 ) <br> 이를 원하지 않을 때에는 '이미지 열기'를 통해 이미지를 새로 불러온다.**
-<img width="700" height="200"" alt="mosaic+gray" src="https://github.com/kkkimsuji/photoshop/assets/117288953/c29be4ec-b5b5-44c6-8f7e-a3e15b30537c">
+
+<img width="700" height="200" alt="mosaic+gray" src="https://github.com/kkkimsuji/photoshop/assets/117288953/c4c54286-2795-4b64-aa1e-1031375587ef">
+
 
 
 <br>
