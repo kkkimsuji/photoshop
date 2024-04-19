@@ -145,7 +145,7 @@
 
 
 * 바이레터럴 블러 
-<img width="700" height="300"" alt="bilateral" src="https://github.com/kkkimsuji/photoshop/assets/117288953/a39c457f-cfc8-4216-a92e-831f479a915a">
+<img width="700" height="300" alt="bilateral" src="https://github.com/kkkimsuji/photoshop/assets/117288953/a39c457f-cfc8-4216-a92e-831f479a915a">
 
 
 
